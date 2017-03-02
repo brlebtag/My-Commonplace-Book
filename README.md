@@ -1,4 +1,4 @@
-# Metal Notes
+# Mental Notes
 
 - When you use an external library or a very well tested algorithm and your code relies on it to work but it isn't working,
 you are probably using it **wrong** or there is a **logical problem** in your code. Programmer always will blame someone'else code
