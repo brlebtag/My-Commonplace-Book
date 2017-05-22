@@ -8,6 +8,8 @@
 ## GIT
 
 - Always lock the master branch, preventing it from direct push or forced push. Use pull request and new commits instead.
+- In colaborative environment, if the team is not familiar with **git** and **git rebase**, avoid using at all 
+costs **git rebase**. It'll cause a lot of unnecessary conflicts and it'll create a giant mess.
 
 ## Postgresql
 - Don't forget to **sort the row_col column** if you're using postgres's **crosstab**.
