@@ -12,3 +12,7 @@
 ## Postgresql
 - Don't forget to **sort the row_col column** if you're using postgres's **crosstab**.
 - `SELECT 'infinity'::DATE` is the biggest date ever in postgres.
+
+## Access control System design
+- DO NOT FORGET THIS SCENARIO: Imagine you're implementing an access control system and you set permissions in all CRUD actions. Now, imagine you have the following situation:
+User A can't list categories (they don't have access to list categories screen), but User A can access post creation screen and in post creation screen there is a list of categories. They don't have direct access to list categories but can list categories in post creation screen.
