@@ -5,6 +5,8 @@
 
 - Watch for Java's **finally** or Ruby's **ensure** operations, or any other **finallyish** function and what you're releasing. Not everything should be released or it's suitable to be released in that moment. Although it is the right place to do such a thing, you may have forgotten the resource was released and you try to use it somewhere else.
 
+- Be careful with async/await in a monothread model. Just because they are not running parallely doesn't mean someone else can't change your values.
+
 ## GIT
 
 - Always lock the master branch, preventing it from direct push or forced push. Use pull request and new commits instead.
