@@ -7,7 +7,7 @@
 
 - Be careful with async/await in a monothread model. Just because they are not running parallely doesn't mean someone else can't change your values.
 
-- Never underestimate the possibility of an IO operation failure. Any kind of IO operation can and eventually will fail, not matter how odd the chances are.
+- Never underestimate the possibility of an IO operation failure. Any kind of IO operation can and eventually will fail, no matter how odd the chances are.
 
 ## GIT
 
