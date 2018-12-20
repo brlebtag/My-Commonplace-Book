@@ -7,6 +7,8 @@
 
 - Be careful with async/await in a monothread model. Just because they are not running parallely doesn't mean someone else can't change your values.
 
+- Never underestimate the possibility of an IO operation failure. Any kind of IO operation can and eventually will fail, not matter how odd the chances are.
+
 ## GIT
 
 - Always lock the master branch, preventing it from direct push or forced push. Use pull request and new commits instead.
