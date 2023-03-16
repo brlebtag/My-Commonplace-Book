@@ -2,6 +2,9 @@
 
 # Networking Knowledge
 
+## TCPv4
+* The **Window field** in the TCPv4 packet is the <ins>receive window</ins> of the <ins>sender</ins>. On the other hand, when the other side receives this packet, Window field will become its <ins>send window</ins>.
+
 ## Wifi-Direct
 * Android uses IP range for wifi direct 192.168.49.1/24. Group Owner (GO) is always 192.168.49.1 (it is hard-coded in the codebase). On the other hand. Windows uses 192.168.137.1/24 (/24 is my supposition). Group Owner is 192.168.137.1.
 
