@@ -1,3 +1,5 @@
+[< Back](https://github.com/brlebtag/My-Commonplace-Book)
+
 # General and Useful observations from my experience or observed in others
 
 - When you're using an external library or a very well tested algorithm and your code relies on it to work but it isn't, you are probably using it in the **wrong** way or there is a **logical problem** in your code. Programmers always tend to blame someone'else code instead of their own.
