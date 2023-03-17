@@ -69,3 +69,18 @@ f) How much did it diversed from the expectations? Just a little? too much? Is t
 g) Are you excluding from the consideration the baseline/noise of the data?
 
 **7. If hypothesis is proved and the problem is solved, you're done, otherwise, repeat step 1 based on observations from your tests**
+
+# General Guidelines
+
+* Always follows Occam's razor: "The simplest explanation is usually the best one (and correct one)".
+* But also do not forget Sherlock Homes' saying: "When you have eliminated all which is impossible then whatever remains, however improbable, must be the truth".
+* Work with deadlines: how much time are you going to allocate to test? to analysis the data? to repeat the tests? How much more are you going to keep testing?
+* Doubt your yourself, doubt your reasoning, doubt what you're seeing, doubt the others, doubt the status quo, doubt group thinking, doubt the data, doubt the tests, doubt the measurements, doubt everything and everyone.
+* Do **NOT** get attached to your opinions. Immediate discard them when they do not fit the data.
+* Listen to others, ask help, get counselling from someone you trust
+* Talk with someone though your reasoning, if you notice some wishful thinking or inability to explain something concise or properly, there is a problem in your knoledge
+* Take breaks, see something different every onece in a while
+* Know when to stop 
+* Trust your gut feelings
+* Doubt your gut feelings
+* Be persistent and patient
