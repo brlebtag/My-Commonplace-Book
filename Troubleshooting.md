@@ -66,6 +66,6 @@ d) Does the data confirm or reject your hypotheses? Does it perfectly fit the hy
 
 f) How much did it diversed from the expectations? Just a little? too much? Is there some possibilities to explain this differences (do not always attribute to measurement or external factors, althoguh that will happen sometimes)
 
-g) Are you taking excluding from consideration the baseline/noise of the data?
+g) Are you excluding from the consideration the baseline/noise of the data?
 
 **7. If hypothesis is proved and the problem is solved, you're done, otherwise, repeat step 1 based on observations from your tests**
