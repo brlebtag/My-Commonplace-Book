@@ -74,6 +74,7 @@ g) Are you excluding from the consideration the baseline/noise of the data?
 
 * Always follows Occam's razor: "The simplest explanation is usually the best one (and correct one)".
 * But also do not forget Sherlock Homes' saying: "When you have eliminated all which is impossible then whatever remains, however improbable, must be the truth".
+* Apply the Copernican principle: Everything is normal and nothing is special or different (until it is not).
 * Work with deadlines: how much time are you going to allocate to test? to analysis the data? to repeat the tests? How much more are you going to keep testing?
 * Doubt your yourself, doubt your reasoning, doubt what you're seeing, doubt the others, doubt the status quo, doubt group thinking, doubt the data, doubt the tests, doubt the measurements, doubt everything and everyone.
 * Do **NOT** get attached to your opinions. Immediate discard them when they do not fit the data.
@@ -83,6 +84,7 @@ g) Are you excluding from the consideration the baseline/noise of the data?
 * Take breaks, see something different every once in a while
 * Do you have sufficent knowledge in the area you're trying to solve the problem? Acquire the fundaments: Study the basics, study the theories, experment with the problem, try out a small version of the problem/thing to get a better understanding of its behavior (preferably its normal behavior).
 * Know when to stop 
+* Take notes along the entire process (just like a commonplace book). It is also good to journal the entire process and all reasoning
 * Trust your gut feelings
 * Doubt your gut feelings
 * Be persistent and patient
