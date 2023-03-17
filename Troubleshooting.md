@@ -80,7 +80,7 @@ g) Are you excluding from the consideration the baseline/noise of the data?
 * Listen to others, ask help, get counselling from someone you trust
 * Talk with someone though your reasoning, if you notice some wishful thinking or inability to explain something concise or properly, there is a problem in your knoledge
 * Use a reducionist approach (break into the smallest parts and their relationships) but do not forget we are dealing with a system and thus all properties of systems will be in play (steady state, shocks, emergent behaviors, positive/negative feeback loops, phase transition, etc).
-* Take breaks, see something different every onece in a while
+* Take breaks, see something different every once in a while
 * Do you have sufficent knowledge in the area you're trying to solve the problem? Acquire the fundaments: Study the basics, study the theories, experment with the problem, try out a small version of the problem/thing to get a better understanding of its behavior (preferably its normal behavior).
 * Know when to stop 
 * Trust your gut feelings
