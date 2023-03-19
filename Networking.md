@@ -13,6 +13,8 @@
 
 * I've noticed that `TCP Zero Window segment` is normal between 0 and 10 times. These results came from testing 1GB file transfers between PC and Android devices in a WLAN environment. More than this, it is a connection problem.
 
+* When there is a `TCP Zero Window segment` situation, the sender side will periodically send `TCP ACK` packets to check if there is still a connection and to poll the other side's situation (receive buffer size). The other side will (if still alive) reply with another `TCP ACK` with current status (receive buffer size) (it can still be zero or another value). Each time the sender side send a ACK packet it will double the waiting time.
+
 ## Wifi-Direct
 * Android uses IP range for wifi direct 192.168.49.1/24. Group Owner (GO) is always 192.168.49.1 (it is hard-coded in the codebase). On the other hand. Windows uses 192.168.137.1/24 (/24 is my supposition). Group Owner is 192.168.137.1.
 
