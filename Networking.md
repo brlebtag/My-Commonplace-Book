@@ -20,11 +20,15 @@
 
 ### Zero Window
 
+* `TCP ACK` is not the same thing as <ins>consuming the data</ins>. The receiver can acknowledge the data but not immediately consume it.
+
 * When Wireshark says that `TCP window specified by the receiver is now completely full`, it means that wireshark has computed the window size of the sender and realized it is full. It must have captured the 3-way handshake, otherwise, this information is wrong. It is always good to capture the 3-way handshake.
 
 * I've noticed that `TCP Zero Window segment` is normal between 0 and 10 times. These results came from testing 1GB file transfers between PC and Android devices in a WLAN environment. More than this, it is a connection problem.
 
 * When there is a `TCP Zero Window segment` situation, the sender side will periodically send `TCP ACK` packets to check if there is still a connection and to poll the other side's situation (receive buffer size). The other side will (if still alive) reply with another `TCP ACK` with current status (receive buffer size) (it can still be zero or another value). Each time the sender side send a ACK packet it will double the waiting time.
+
+* `Silly Window Syndrome (SWS)` is caused when the receive buffer is shrinking (the other size is advertising smaller and smaller buffer size) and there is no mechanism to avoid advertising small packets or any other mechanism in the sender side to avoid sending small and inefficient packet size. `Nagle algoritm` helps avoiding this problem (in the sender side). On the other hand, if the receiver side has only a small receive window, it can close the window entirely (returns zero window) and wait the buffer to be free and have more space.
 
 ## Wifi-Direct
 * Android uses IP range for wifi direct 192.168.49.1/24. Group Owner (GO) is always 192.168.49.1 (it is hard-coded in the codebase). On the other hand. Windows uses 192.168.137.1/24 (/24 is my supposition). Group Owner is 192.168.137.1.
