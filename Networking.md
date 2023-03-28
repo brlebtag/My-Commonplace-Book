@@ -43,6 +43,9 @@
 
 ## Useful Commands
 
+## Wireshark
+* To check for IP fragmentation use: ` ip.flags.mf == 1 or ip.frag_offset gt 0` or `ip[6:2]&3fff or icmp[1]==4` (more complete).
+
 ### Windows
 
 * To check `Max Speed` of the wifi card run `netsh wlan show interfaces` or `Get-NetAdapter | select interfaceDescription, name, status, linkSpeed`
