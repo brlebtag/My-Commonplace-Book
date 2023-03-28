@@ -30,6 +30,12 @@
 
 * `Silly Window Syndrome (SWS)` is caused when the receive buffer is shrinking (the other size is advertising smaller and smaller buffer size) and there is no mechanism to avoid advertising small packets or any other mechanism in the sender side to avoid sending small and inefficient packet size. `Nagle algoritm` helps avoiding this problem (in the sender side). On the other hand, if the receiver side has only a small receive window, it can close the window entirely (returns zero window) and wait the buffer to be free and have more space.
 
+## Collision Avoidance
+
+* `Collision Avoidance` controls the burst of data being sent and only happens in the sender's size, however, it is limited by the <ins>receiver's receive windo</ins>.
+
+* It does not influence (i.e. reduce) the receiver's receive window. The Receive window is <ins>only reduced if the receiver is clogged</ins>.
+
 ## Wifi-Direct
 * Android uses IP range for wifi direct 192.168.49.1/24. Group Owner (GO) is always 192.168.49.1 (it is hard-coded in the codebase). On the other hand. Windows uses 192.168.137.1/24 (/24 is my supposition). Group Owner is 192.168.137.1.
 
