@@ -41,6 +41,8 @@
 
 * Android limits in the code to 5 Group Clients (GC). Manufactures can change this value. Nothing prevents it. Android will randomly select IP for Group clients. Windows seems to start backwards but it did not search further.
 
+* To turn a **Windows** PC into a hosted device, first check if the device supports hosted network by issuing the command `netsh wlan show drivers` in <ins>administrator mode </ins>  and see if `Hosted network supported: Yes`, if `No`, nothing can be done. Then, execute the commnad `netsh wlan set hostednetwork mode=allow ssid=SOME_SSID key=SOME_KEY` followed by `netsh wlan start hostednetwork`. You can now see the SSID in the network tab and connect to the network using <ins>SOME_KEY</ins> as specified.
+
 ## Useful Commands
 
 ## Wireshark
