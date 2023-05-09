@@ -43,10 +43,17 @@
 
 * To turn a **Windows** PC into a hosted device, first check if the device supports hosted network by issuing the command `netsh wlan show drivers` in <ins>administrator mode </ins>  and see if `Hosted network supported: Yes`, if `No`, nothing can be done. Then, execute the commnad `netsh wlan set hostednetwork mode=allow ssid=SOME_SSID key=SOME_KEY` followed by `netsh wlan start hostednetwork`. You can now see the SSID in the network tab and connect to the network using <ins>SOME_KEY</ins> as specified.
 
+## TCP Offload Engine (TOE)
+* Sometimes you may observe some discrepancies in packet size (such as a packet bigger than MSS or MTU). Chances are that the operation system is using TOE. It can use `Large receive offload (LRO)`, which basically groups packets into larger ones to improve overall throughput. The size of packet will depend on the traffic speed. Larger traffic equals to larger packets (up to ~65K which it is the maximum TCP segment). It can also use `Large send offload (LSO)`, which allows operation system to pass a bigger TCP segment (usually ~65K) to be further split into smaller TCP segments (limited by MSS). Because wireshark sits after LRO act or after LSO has acted, it will capture packets with strange larger packets. However, nothing is transfered with segments bigger than MSS (and ultimately bigger than MTU).
+
 ## Useful Commands
 
-## Wireshark
+### Wireshark
 * To check for IP fragmentation use: ` ip.flags.mf == 1 or ip.frag_offset gt 0` or `ip[6:2]&3fff or icmp[1]==4` (more complete).
+
+### TShark
+* To list all interfaces use: `tshark(.exe) -D`
+* To capture network traffic: `tshark(.exe) -f file.pcap -i 6 -s 100` (capture all network traffic from interface _6_ in file _file.pcap_ and limit the size of each packet to _100 bytes_).
 
 ### Windows
 
