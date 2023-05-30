@@ -9,6 +9,8 @@
 
 * Nothing will be transmitted bigger than the `Maximum segment size` but a big window size allows the other size to send more packets without acknowledgement.
 
+* A connected socket will be created and ready to be accepted after the 3-way handshake. Therefore, as far as I know, you can't programmatically control this process of the TCP protocol.
+
 ### Fragmentation
 * No packet will be transmitted bigger than the MTU of the next hop, although there is no mechanism to prevent sending a packet bigger than the MTU size. The packet will be truncated by the other side.
 
