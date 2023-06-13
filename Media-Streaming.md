@@ -13,9 +13,9 @@
 * `Elementary Stream` (ES) is the most basic part of a stream (audio, video, etc). For instance, in H.264, an ES would be a stream of NALUs or using the RFC-3984 term: a "naked"
    H.264 NAL unit stream.
 
-* `Annex B` is a bundle format of NALUs for network streaming. it is prefixed by 0x000001 (3-bytes) or 0x00000001 (4-bytes). More information can be found (here)[https://stackoverflow.com/questions/24884827/possible-locations-for-sequence-picture-parameter-sets-for-h-264-stream/24890903#24890903] and (here)[https://stackoverflow.com/questions/29525000/how-to-use-videotoolbox-to-decompress-h-264-video-stream/29525001#29525001]
+* `Annex B` is a bundle format of NALUs for network streaming. it is prefixed by 0x000001 (3-bytes) or 0x00000001 (4-bytes). More information can be found [here](https://stackoverflow.com/questions/24884827/possible-locations-for-sequence-picture-parameter-sets-for-h-264-stream/24890903#24890903) and [here](https://stackoverflow.com/questions/29525000/how-to-use-videotoolbox-to-decompress-h-264-video-stream/29525001#29525001)
 
-* (`RFC-3984`)[https://www.rfc-editor.org/rfc/rfc3984] When you combine H.264 and RTP, according to the this RFC, you must not use Annex B, only elementary stream of "naked"
+* [`RFC-3984`](https://www.rfc-editor.org/rfc/rfc3984) When you combine H.264 and RTP, according to the this RFC, you must not use Annex B, only elementary stream of "naked"
    H.264 NAL unit stream.
 
 # AAC
