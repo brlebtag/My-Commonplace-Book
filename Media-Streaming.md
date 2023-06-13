@@ -5,8 +5,13 @@
 
 * `Timestamp` is used to calculate the presentation clock on the destiny side. It is also used as an Identifier. A single  video (H.264) stream can be split into multiples RTP packets. Each packet will have the same timestamp and thus it can be used as ID of the packet by the destiny to rebuild the packet.
 
-* Sequence Number is a monotonic (incremental) number. Each packet sent increments the sequence number by 1. You can use Timestamp (as ID) and sequence number to rebuild the packet on arrival.
+* `Sequence Number` is a monotonic (incremental) number. Each packet sent increments the sequence number by 1. You can use Timestamp (as ID) and sequence number to rebuild the packet on arrival.
 
+# H.264
+
+# AAC
+
+# Media Foundation
 
 ## Interesting sources
 
