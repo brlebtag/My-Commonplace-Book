@@ -14,8 +14,8 @@
 
 * Function calls, when developed for a multiprocessor environment, can present different `progress conditions` such as: (i) wait-free, (ii) lock-free and (iii) obstruction-free.
 
-* wait-free means the function guarantees the function will not be blocked (e.g. like using a lock, semaphore, mutex, etc) and no one will starve (i.e. eventually your function call will succeed). If there is a bound number or time, it is called `bounded wait-free`.
+* `Wait-free` means the function guarantees the function will not be blocked (e.g. like using a lock, semaphore, mutex, etc) and no one will starve (i.e. eventually your function call will succeed). If there is a bound number or time, it is called `bounded wait-free`.
 
-* lock-free means the function guarentees the function will not be blocked (e.g. like using a lock, semaphore, mutex, etc), at least one thread will execute but others may starve (depending on the problem it might never happen).
+* `Lock-free` means the function guarentees the function will not be blocked (e.g. like using a lock, semaphore, mutex, etc), at least one thread will execute but others may starve (depending on the problem it might never happen).
 
-* obstruction-free means the function call execute until the very end after all other functions are aborted. Imagine like, you remove all the obstruction from the way for that particular function to execute, it will execute freely. One way people may implement an obstruction-free is by implementing a rollback function to abort current work in case there is a collision due to concurrency. For instance, the function is free to execute but, if in the final moment it realizes it is in a concurrency situation, it may choose to abort itself.
+* `Obstruction-free` means the function call execute until the very end after all other functions are aborted. Imagine like, you remove all the obstruction from the way for that particular function to execute, it will execute freely. One way people may implement an obstruction-free is by implementing a rollback function to abort current work in case there is a collision due to concurrency. For instance, the function is free to execute but, if in the final moment it realizes it is in a concurrency situation, it may choose to abort itself.
