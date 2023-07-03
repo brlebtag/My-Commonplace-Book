@@ -1,0 +1,3 @@
+# Terms
+
+* `Epistemology` concerns with knowledge. It studies the nature, origin and scope of knowledge, epistemic justification, rationality of believes and various related issues. These are questions that it tries to answer: (i) _What do people know?_ (ii) _What does it mean to say that people know something?_ (iii) _What makes justified beliefs justified?_ (iv) _How do people know that they know?_ (v) _How can people create formal models about issues related to knowledge?_ (formal epistemology) (vi) _What are the historical conditions of changes in different kinds of knowledge?_ (historial epistemology) (vii) _What are the methods, aims, and subject matter of epistemological inquiry?_ (metaepistemology) (viii) _How do people know together?_ (social epistemology).
