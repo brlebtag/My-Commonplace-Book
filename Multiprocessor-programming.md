@@ -21,3 +21,5 @@
 * `Obstruction-free` means the function call execute until the very end after all other functions are aborted. Imagine like, you remove all the obstruction from the way for that particular function to execute, it will execute freely. One way people may implement an obstruction-free is by implementing a rollback function to abort current work in case there is a collision due to concurrency. For instance, the function is free to execute but, if in the final moment it realizes it is in a concurrency situation, it may choose to abort itself.
 
 * `Contention` occurs when multiple threads try to acquire a lock. `High contention` means a big number of threads are trying to acquire a lock and `low contention` means a small number of threads are trying to acquire the lock at the same time.
+
+* `False Sharing` occurs when adjacent data items (such as array elements) share a single cache line. A write to one item invalidates that entire cache line, which causes invalidation traffic to processors that are spinning on unchanged but near items that happen to fall in the same cache line.
