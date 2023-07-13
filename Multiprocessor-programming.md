@@ -23,3 +23,5 @@
 * `Contention` occurs when multiple threads try to acquire a lock. `High contention` means a big number of threads are trying to acquire a lock and `low contention` means a small number of threads are trying to acquire the lock at the same time.
 
 * `False Sharing` occurs when adjacent data items (such as array elements) share a single cache line. A write to one item invalidates that entire cache line, which causes invalidation traffic to processors that are spinning on unchanged but near items that happen to fall in the same cache line.
+
+* `Cache Coherency` is a situation where multiple processor cores share the same memory hierarchy, but have their own L1 data and instruction caches.
