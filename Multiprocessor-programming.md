@@ -25,3 +25,7 @@
 * `False Sharing` occurs when adjacent data items (such as array elements) share a single cache line. A write to one item invalidates that entire cache line, which causes invalidation traffic to processors that are spinning on unchanged but near items that happen to fall in the same cache line.
 
 * `Cache Coherency` is a situation where multiple processor cores share the same memory hierarchy, but have their own L1 data and instruction caches.
+
+* `Freedom from interference` is when an algorithm guarantees that the user can only modify it's instances via it's public methods, i.e. no internal components of the algorithm (such as nodes in a list or tree) can't be modified externally.
+
+* `Lost-wakeup problem` happens when special care is not taken and, due to concurrency, an thread does not receives a wake-up call from the OS, even though, the algorithm should have called it. To avoid this, you should invoke wake-up calls in all circumstances (not in very specific cases, such as in the first time there is no item on the list or the first time when the list is full) and/or specify a timeout. Otherwise, threads can hang forever (depending on the problem).
