@@ -60,4 +60,4 @@
 ### Windows
 
 * To check `Max Speed` of the wifi card run `netsh wlan show interfaces` or `Get-NetAdapter | select interfaceDescription, name, status, linkSpeed`
-* To check `MTU size` run `netsh ipv4 show interfaces`
+* To check `MTU size` run `netsh ipv4 show interfaces` or `netsh interface ipv4 show subinterfaces`
