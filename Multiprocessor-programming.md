@@ -29,3 +29,5 @@
 * `Freedom from interference` is when an algorithm guarantees that the user can only modify it's instances via it's public methods, i.e. no internal components of the algorithm (such as nodes in a list or tree) can't be modified externally.
 
 * `Lost-wakeup problem` happens when special care is not taken and, due to concurrency, an thread does not receives a wake-up call from the OS, even though, the algorithm should have called it. To avoid this, you should invoke wake-up calls in all circumstances (not in very specific cases, such as in the first time there is no item on the list or the first time when the list is full) and/or specify a timeout. Otherwise, threads can hang forever (depending on the problem).
+
+* `Linearization Point` is the code segment where the sequence of events/code stop from being concurrent and becomes sequencial. For example, right after a mutex.lock(), only one thread can execute at once. So the lock() becomes a linearization point.
