@@ -11,3 +11,5 @@
 * Never underestimate the possibility of an IO operation failure. Any kind of IO operation can and eventually will fail, no matter how odd the chances are.
 
 * [C/C++] If you try to copy bytes but values are different in destiny. Check if the date type is correct because C/C++ has no byte datatype and `char != unsigned char`.
+
+* [C/C++] Bit manipulation with signed and unsigned is prone to error (it is not just bits). Keep all parameters to the same type and then manipulate the bits (Avoid headaches).
