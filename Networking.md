@@ -61,3 +61,4 @@
 
 * To check `Max Speed` of the wifi card run `netsh wlan show interfaces` or `Get-NetAdapter | select interfaceDescription, name, status, linkSpeed`
 * To check `MTU size` run `netsh ipv4 show interfaces` or `netsh interface ipv4 show subinterfaces`
+* I observed when using winsock2 that sequential sockets with port 0 will be assigned sequential ports by the OS. Not sure if that also would happen with Linux or other OSs.
