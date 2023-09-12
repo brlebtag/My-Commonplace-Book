@@ -1,16 +1,16 @@
-* For me, a good piece of code must be (SOC): (i) simple (it solves one problem), (ii) obvious (the author's intentions must be clear to anyone that reads it) and (iii) concise (the simplest possible solution that do the trick unless there is a performance incentive to do differently
+* For me, a good piece of code must be (SOC): (i) (s)imple (it solves one problem), (ii) (o)bvious (the author's intentions must be clear to anyone that reads it) and (iii) (c)oncise (the simplest possible solution that do the trick unless there is a performance incentive to do differently
 
 * When designing a complex software, divide into two parts: (i) the framework (take the common parts and add to the project's library, use some scaffolding tool to optimize some common tasks, and so one)  (ii) the client code (it will use the framework and other libraries to implement the final software). Keep constantly moving common, repeatable and fallible (susceptible to human error) parts of the system into the framework. Make programmers's live easy as the main goal.
 
 * When designing the framework, all main use cases must be accessible with zero or few lines of code (and well documented). However, always provie a "hatch" for any other possible scenarios. Do not make it hard to adapt. This will discourage developers to use it.
 
-* TDD is a good approach to "feel" your framework or client code. That's the whole point of TDD. Otherwise it would be called Test first development.
+* Test driven development (TDD) is a good approach to "feel" your framework or client code. That's the whole point of TDD. Otherwise it would be called Test first development.
 
 * Fluent code is very goode to use and adheres to the SOC principles (unless there is a performance reason not to do so).
 
 * Functional programming (FP) principles such as pure functions and avoiding or controlling side-effects makes code more roboust.
 
-* I like to mix OOP and functional programming. I design my classes like OOP but internally I use FP.
+* I like to mix Object-oriented Programming (OOP) and functional programming. I design my classes like OOP but internally I use FP.
 
 * One important lesson from FP that I constantly use is to think the problem as a sequence of sub-problems. Each problem is composed of sub-problems. Each sub-problem is a function/classes that solves only a single problem. The final solution is the composible of the sub-problems.
 
@@ -39,3 +39,27 @@
 * Avoid Mutex and Semaphores (it causes performance issues). Prefer more to do more parallel work, whenever is possible. Better yet, use/implemenet a lock-free or wait-free data structure/algorithm.
 
 * Avoid, at all costs, sleep or delay directives. This will cause temporal dependencies and lots of hard to catch bugs.
+
+* Single thread like javascript is a very useful and performatic architecture. I like to emulate this architecture every once in a while because it is easy and you don't have to worry about concurrent memory access.
+
+* Concurrecy affects everywhere in the code. I perfer to assume that there is no order when using mutex or semaphores (avoid using them) (although, as far as I know, they are first-in-first-out).
+
+* Sometimes "do not repeat yourself" (DRY) is more complex than worth it. Personally I prefer single source of truth (SST) (i.e. the business rule will be in a single place only).
+
+* Split the code increases structural complexity (be aware of it). Only increase structural complexity when needed.
+
+* It is super important to keep refactoring the code, to reduce entropy (chaos, mess) and to make life easier (perhaps some code could go to the framework code?).
+
+* The system is constantly changing, perfection is impossible in this scenario.
+
+* Break the code into semantic elements, not just break the code because "it is too big". Always think about the language. You should approach development as you approach writing (literature).
+
+* Sub-problem classes/functions does not any hard-coded parameters. Parent class/function calls child with parameters needed. Even the root class/function should avoid hard-coded parameters and use enviroment variables or something else instead.
+
+* Some important attributes of a good code are: (i) semantic consistent (you don't write/name A but it's actually B), (ii) linear (you can follow the code as much as possible) and (iii) deterministic (as much as possible)
+
+* Avoid trusting 3-party APIs/code. Wrap them into a protection layer.
+
+* Always assume something will go wrong. Add treatment to that.
+
+* I like to structure my code in the following order: Firstly all invalid cases (preconditions) guarded by guard clauses in the order of the most critical to least critial (sometimes you can even add recover mechanisms in the least critical clauses and move on). Then, lastly, the happy path. it is easy to find all the precondictions to run your code and, in the happy path, the code is simpler because all necessary conditions were already treated. You only do the happy path. It is also more robust.
