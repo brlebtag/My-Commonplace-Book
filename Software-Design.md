@@ -13,4 +13,29 @@
 * I like to mix OOP and functional programming. I design my classes like OOP but internally I use FP.
 
 * One important lesson from FP that I constantly use is to think the problem as a sequence of sub-problems. Each problem is composed of sub-problems. Each sub-problem is a function/classes that solves only a single problem. The final solution is the composible of the sub-problems.
-  
+
+* Idempotent is a powerful technique. It help creating safer code together with pure functions and avoiding/controlling side-effects. Use it whenever is possible.
+
+* Exceptions should be used in exceptional cases (i.e. unexpected events) otherwise it is better to return a Result/Optional/Monoid/Boolean value when error _can_ occur (e.g. validation). Some people, like chrome team, avoids exception altogether.
+
+* An excellent tip I once learned is: `only deal with a single problem per time`. Don't try to do more than one problem per time. So, for instance, create a new system that the company has never worked before, using a new language with a new framework, is a huge red flag. Too much unknowns.
+
+* It is also good practice to determine the invarients of your code as well as the pre and pos conditions (function or class) needs/will provide.
+
+* Your whole code should be read as a sentence. You should be able to read your code and see very clearly the functional requirements (that's why fluent API's are good).
+
+* Your code/API/Framework should be modeled to be used by others, not just you. We should always consider: "if someone else reads this code, will they understand?". That's an obvious code is a essencial principle.
+
+* Follow the network (I think) design principle: be open to what you will consume/receive but be restrictive to what you will produce/return (i.e. be robust to erroneous input but follow the agreed rules). The final software will be more robust.
+
+* Sentinels can make code more easy to implement and less error-prone.
+
+* Mutability is fairly ok in a non-concurrent environment. However, in a concurrent environment, you should pay very close attention to mutability. Reactor or Actor model (from erlang/elixir) is the best way I know to develop concurrent code. It is just perfection (as close as you can get) and it is very performatic (as the old saying goes, whatsup uses erlang and only have a few servers to billion users world-wide).
+
+* Single thread like javascript does not have concurrent accesses but it still has concurrent problems due to async/await primitives.
+
+* I will, most of the time, prefer orchestration code/architecture over choreography. It is safer, more stable and most importantly easier to reason. (unless there is a very good reason otherwise).
+
+* Avoid Mutex and Semaphores (it causes performance issues). Prefer more to do more parallel work, whenever is possible. Better yet, use/implemenet a lock-free or wait-free data structure/algorithm.
+
+* Avoid, at all costs, sleep or delay directives. This will cause temporal dependencies and lots of hard to catch bugs.
