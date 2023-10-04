@@ -48,7 +48,7 @@
 ## TCP Offload Engine (TOE)
 * Sometimes you may observe some discrepancies in packet size (such as a packet bigger than MSS or MTU). Chances are that the operation system is using TOE. It can use `Large receive offload (LRO)`, which basically groups packets into larger ones to improve overall throughput. The size of packet will depend on the traffic speed. Larger traffic equals to larger packets (up to ~65K which it is the maximum TCP segment). It can also use `Large send offload (LSO)`, which allows operation system to pass a bigger TCP segment (usually ~65K) to be further split into smaller TCP segments (limited by MSS). Because wireshark sits after LRO act or after LSO has acted, it will capture packets with strange larger packets. However, nothing is transfered with segments bigger than MSS (and ultimately bigger than MTU).
 
-## WebSocket Protocol ([RFC 6455]([https://website-name.com 'Link title'](https://datatracker.ietf.org/doc/html/rfc6455)))
+## WebSocket Protocol ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455))
 
 * According to the protocol, messages can be fragmented into multiple websocket frames. However, application layer will not receive the fragments of the message. The Websocket layer wull accumulate and rebuild the original message. There is a FIN bit in the frame header to indicate the end of the packet, which allows websocket layer to determine when the message is complete. In any error scenario, there is an exception for the application layer.
 
