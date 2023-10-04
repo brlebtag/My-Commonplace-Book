@@ -50,7 +50,7 @@
 
 ## WebSocket Protocol ([RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455))
 
-* According to the protocol, messages can be fragmented into multiple websocket frames. However, application layer will not receive the fragments of the message. The Websocket layer wull accumulate and rebuild the original message. There is a FIN bit in the frame header to indicate the end of the packet, which allows websocket layer to determine when the message is complete. In any error scenario, there is an exception for the application layer.
+* According to the protocol, messages can be fragmented into multiple websocket frames. However, application layer will **NOT** receive the fragments of the message. The Websocket layer wull accumulate and rebuild the original message. There is a `FIN` bit in the frame header to indicate the end of the packet, which allows websocket layer to determine when the message is complete. In any error scenario, there is an exception for the application layer.
 
 ## Useful Commands
 
